@@ -3,12 +3,33 @@
 @tailwind utilities;
 
 :root {
-
+  background-color: #1A1A1A;
 }
 
 body {
   height: 100vh;
-width: 100vw;
+  width: 100vw;
   display: flex;
-  
 }
+
+
+.navbar{
+  width: 278px;
+  background: #171717;
+  box-shadow: 1px 0px 0px 0px #686868;
+}
+
+.mobileTop{
+  display: none;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .navbar{
+    display: none;
+  }
+  .mobileTop{
+    display: block;
+  }
+}
+
