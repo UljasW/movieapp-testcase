@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
 }
 
 body {
@@ -12,25 +12,29 @@ body {
   display: flex;
 }
 
-
-.navbar{
+.navbar {
   width: 278px;
   background: #171717;
   box-shadow: 1px 0px 0px 0px #686868;
   padding: 39px;
 }
 
-.mobileTop{
+.mobileTop {
   display: none;
 }
 
-
 @media only screen and (max-width: 767px) {
-  .navbar{
+  .navbar {
     display: none;
   }
-  .mobileTop{
-    display: block;
+  .mobileTop {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+  }
+
+  .searchBar {
+    width: 100%;
   }
 }
-

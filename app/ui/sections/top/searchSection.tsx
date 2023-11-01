@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import SearchBar from "../../components/searchBar";
 
 export default function SearchSection() {
   return (
-    <div>searchSection</div>
-  )
+    <section >
+      <SearchBar />
+    </section>
+  );
 }
