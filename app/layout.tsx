@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        <section className="w-full h-full overflow-auto p-5">
+        <section className="mainSection">
           <TopBar />
           {children}
         </section>

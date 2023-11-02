@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function NavButtons() {
   return (
     <div className="flex flex-col gap-14">
-      <Link href={"/home"} className="flex flex-row">
+      <Link href={"/"} className="flex flex-row">
         <Image src={HomeIcon} alt={"Home icon"} />
         <h3 className="text-white font-inter text-2xl font-semibold ml-5">
           Home

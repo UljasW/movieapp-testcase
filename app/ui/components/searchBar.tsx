@@ -23,7 +23,7 @@ export default function SearchBar() {
           className="ml-4 focus:outline-none"
           onChange={handleChange}
           type="text"
-          placeholder="Search.."
+          placeholder="Search movie titles"
           name="search"
         />
       </div>

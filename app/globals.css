@@ -12,11 +12,21 @@ body {
   display: flex;
 }
 
+.mainSection {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 25px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+
 .navbar {
   width: 278px;
   background: #171717;
   box-shadow: 1px 0px 0px 0px #686868;
-  padding: 39px;
+  padding: 40px;
 }
 
 .mobileTop {
@@ -36,5 +46,9 @@ body {
 
   .searchBar {
     width: 100%;
+  }
+
+  .mainSection {
+    padding: 20px;
   }
 }
