@@ -4,7 +4,7 @@ import SearchSection from './searchSection'
 
 export default function Topbar() {
   return (
-    <div style={{height:"135px"}}>
+    <div>
       <MobileTop/>
       <SearchSection/>
     </div>

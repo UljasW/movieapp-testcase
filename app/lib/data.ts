@@ -3,6 +3,7 @@ import { Movie } from "./types";
 const API_KEY = process.env.REACT_APP_API_KEY;
 const baseUrl = "https://api.themoviedb.org/3/";
 
+
 export const getTrending = async (): Promise<Movie[]> => {
   const response = await fetch(
     baseUrl + "trending/movie/week?api_key=" + API_KEY
@@ -14,9 +15,10 @@ export const getTrending = async (): Promise<Movie[]> => {
   return response;
 };
 
-export const topRated = async (): Promise<Movie[]> => {
+export const getNowPlaying = async (): Promise<Movie[]> => {
   const response = await fetch(baseUrl + "movie/now_playing?api_key=" + API_KEY)
     .then((response) => response.json())
+    .then((data) => data.results)
     .catch((err) => console.error(err));
 
   return response;

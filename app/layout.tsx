@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import TopBar from "./ui/sections/top/topbar";
 import Navbar from "./ui/sections/nav/navbar";
+import Disclaimer from "./ui/sections/disclaimer/disclaimer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
         <section className="mainSection">
           <TopBar />
           {children}
+          <Disclaimer/>
         </section>
       </body>
     </html>
