@@ -1,6 +1,5 @@
 import { getTopRated } from "@/app/lib/data";
 import React from "react";
-import Poster from "../../components/poster";
 import SmallMovieDisplay from "../../components/smallMovieDisplay";
 
 export default async function TopRated() {
