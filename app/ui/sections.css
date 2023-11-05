@@ -1,0 +1,21 @@
+.mobileTop {
+  display: none;
+}
+
+.navbar {
+  width: 278px;
+  background: #171717;
+  box-shadow: 1px 0px 0px 0px #686868;
+  padding: 40px;
+}
+@media only screen and (max-width: 767px) {
+  .mobileTop {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  .navbar {
+    display: none;
+  }
+}

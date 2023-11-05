@@ -1,10 +1,10 @@
 import { Movie } from "./types";
 
-const API_KEY = process.env.REACT_APP_API_KEY;
+const API_KEY = process.env.API_KEY || "";
 const baseUrl = "https://api.themoviedb.org/3/";
 
-
 export const getTrending = async (): Promise<Movie[]> => {
+  console.log("API_KEY", API_KEY);
   const response = await fetch(
     baseUrl + "trending/movie/week?api_key=" + API_KEY
   )
@@ -33,6 +33,19 @@ export const getTopRated = async (): Promise<Movie[]> => {
   return response;
 };
 
+export const searchMovies = async (query: string): Promise<Movie[]> => {
+  console.log("api", API_KEY);
+  const response = await fetch(
+    baseUrl + "search/movie?api_key=" + API_KEY + "&query=" + query
+  )
+    .then((response) => response.json())
+    .then((data) => data.results)
+    .catch((err) => console.error(err));
+
+  return response;
+};
+
+
 export const discoverMovies = async (
   filters: Record<string, string>
 ): Promise<Movie[]> => {
@@ -50,3 +63,4 @@ export const discoverMovies = async (
 
   return response;
 };
+

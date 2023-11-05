@@ -1,10 +1,14 @@
 "use client";
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
 import Image from "next/image";
 import SearchIcon from "@/public/search-icon.svg";
+import "../components.css";
+import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 export default function SearchBar() {
   const [search, setSearch] = useState("");
+  const router = useRouter();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
@@ -12,6 +16,8 @@ export default function SearchBar() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    router.push("/results?search=" + search);
     console.log(search);
   };
 

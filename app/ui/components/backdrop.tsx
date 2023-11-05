@@ -1,6 +1,7 @@
 import { Movie } from "@/app/lib/types";
 import React from "react";
 import Image from "next/image";
+import "../components.css";
 
 interface Props {
   movie: Movie;

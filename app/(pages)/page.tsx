@@ -4,10 +4,10 @@ import Trending from "../ui/sections/home/trending";
 
 export default function Home() {
   return (
-    <main className="" >
+    <section className="" >
       <Trending/>
       <NowPlaying/>
       <TopRated/>
-    </main>
+    </section>
   )
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import BurgerButton from "../../components/burgerButton";
-
+import "../../sections.css";
 export default function MobileTop() {
   return (
     <div className="mobileTop">
