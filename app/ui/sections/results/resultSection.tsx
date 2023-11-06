@@ -3,7 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import React, { useEffect } from "react";
 import { Movie } from "@/app/lib/types";
-import { getSearchAction } from "@/app/lib/getSearchAction";
+import { getSearchAction } from "@/app/lib/serverActions";
 import BiglMovieDisplay from "../../components/bigMovieDisplay";
 
 export default function ResultSection() {
@@ -23,7 +23,6 @@ export default function ResultSection() {
   return (
     <div className="mt-20">
       <h1 className="text-white font-inter  text-4xl font-bold ">Search</h1>
-
       <BiglMovieDisplay movies={data} />
     </div>
   );

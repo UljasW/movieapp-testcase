@@ -2,9 +2,7 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
 import Image from "next/image";
 import SearchIcon from "@/public/search-icon.svg";
-import "../components.css";
 import { useRouter } from "next/navigation";
-import { useSearchParams } from "next/navigation";
 
 export default function SearchBar() {
   const [search, setSearch] = useState("");
@@ -22,7 +20,7 @@ export default function SearchBar() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-96 searchBar">
+    <form onSubmit={handleSubmit} className="md:w-96 w-full">
       <div className="flex w-full p-2.5 h-10 flex-shrink-0 rounded-full bg-white">
         <Image src={SearchIcon} alt={"Search icon"} />
         <input

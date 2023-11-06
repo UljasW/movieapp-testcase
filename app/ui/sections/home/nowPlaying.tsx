@@ -13,6 +13,7 @@ export default async function NowPlaying() {
         Now playing
       </h1>
       <SmallMovieDisplay movies={data}/>
+
     </div>
   );
 }

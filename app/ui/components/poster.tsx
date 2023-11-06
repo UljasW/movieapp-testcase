@@ -1,7 +1,6 @@
 import { Movie } from "@/app/lib/types";
 import React from "react";
 import Image from "next/image";
-import "../components.css"
 interface Props {
   movie: Movie;
 }
@@ -18,12 +17,13 @@ export default function Poster(props: Props) {
         height={0}
         className="h-full w-full rounded-md"
         sizes="100vw"
-
       ></Image>
 
-      <div className="rounded-md posterCover">
+      <div className="rounded-md w-full h-full absolute bottom-0 border-2 border-white bg-opacity-80 bg-black opacity-0 hover:flex hover:flex-col hover:justify-center hover:items-center hover:text-center hover:opacity-100">
         <h4 className="text-white text-4xl font-bold">{props.movie.title}</h4>
-        <span className="text-white text-base font-normal">{props.movie.release_date.split("-")[0]}</span>
+        <span className="text-white text-base font-normal">
+          {props.movie.release_date.split("-")[0]}
+        </span>
       </div>
     </div>
   );

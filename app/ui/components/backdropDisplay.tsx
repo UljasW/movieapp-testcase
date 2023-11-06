@@ -7,7 +7,7 @@ interface Props {
 }
 export default function BackdropDisplay(props: Props) {
   return (
-    <div className="flex flex-row gap-8 mt-8 backdropDisplay">
+    <div className="flex md:flex-row gap-8 mt-8 flex-col">
       {props.movies.splice(0, 2).map((movie) => (
         <Backdrop movie={movie} />
       ))}
