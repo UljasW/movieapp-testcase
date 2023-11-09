@@ -1,21 +1,27 @@
 "use client";
 import React from "react";
-interface Props {
-  category: string;
-}
-export default function FilterButton(props: Props) {
-  const [isPressed, setIsPressed] = React.useState(false);
 
+// Add the new props to the interface
+interface Props {
+  genre: string;
+  isActive: boolean;
+  setIsActive: () => void;
+}
+
+// Destructure the new props in the component function
+export default function FilterButton({ genre, isActive, setIsActive }: Props) {
+  // Modify the button click handler to call setIsActive
   const toggleButton = () => {
-    setIsPressed(!isPressed);
+    setIsActive();
   };
 
+  // Modify the className to apply styles based on the isActive prop
   return (
     <button 
-      className={`text-white border-white border w-36 h-10 flex justify-center items-center rounded-full text-center text-base font-normal font-bold ${isPressed ? 'bg-white text-black' : 'bg-transparent'}`}
+      className={`text-white border-white border w-36 flex-shrink-0 h-10 flex justify-center items-center rounded-full text-center text-base font-normal font-bold ${isActive ? 'bg-white text-black' : 'bg-transparent text-white'}`}
       onClick={toggleButton}
     >
-      {props.category}
+      {genre}
     </button>
   );
 }

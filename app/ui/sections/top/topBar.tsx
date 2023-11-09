@@ -4,9 +4,9 @@ import SearchSection from './searchSection'
 
 export default function Topbar() {
   return (
-    <div>
+    <header>
       <MobileTop/>
       <SearchSection/>
-    </div>
+    </header>
   )
 }

@@ -7,9 +7,9 @@ interface Props {
 }
 export default function SmallMovieDisplay(props: Props) {
   return (
-    <div className="flex flex-row gap-8 overflow-x-auto mt-8 ">
+    <div className="flex flex-wrap md:flex-nowrap md:flex-row gap-8 w-full justify-center md:justify-start overflow-hidden mt-8 md:overflow-x-auto">
       {props.movies?.map((movie) => (
-        <div className=" shrink-0">
+        <div className="shrink-0">
           <Poster movie={movie} />
         </div>
       ))}

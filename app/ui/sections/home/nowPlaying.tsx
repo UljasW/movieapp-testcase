@@ -8,12 +8,12 @@ import SmallMovieDisplay from "../../components/smallMovieDisplay";
 export default async function NowPlaying() {
   const data = await getNowPlaying();
   return (
-    <div className="mt-20">
+    <section className="mt-20">
       <h1 className="text-white font-inter  text-4xl font-bold ">
         Now playing
       </h1>
       <SmallMovieDisplay movies={data}/>
 
-    </div>
+    </section>
   );
 }

@@ -1,4 +1,4 @@
-import { Movie } from "./types";
+import { Genre, Movie } from "./types";
 
 const API_KEY = process.env.API_KEY || "";
 const baseUrl = "https://api.themoviedb.org/3/";
@@ -45,17 +45,9 @@ export const searchMovies = async (query: string): Promise<Movie[]> => {
   return response;
 };
 
-
-export const discoverMovies = async (
-  filters: Record<string, string>
-): Promise<Movie[]> => {
-  const searchParams = new URLSearchParams(filters);
+export const discoverMovies = async (filter: number): Promise<Movie[]> => {
   const response = await fetch(
-    baseUrl +
-      "discover/movie?api_key=" +
-      API_KEY +
-      "&" +
-      searchParams.toString()
+    baseUrl + "discover/movie?api_key=" + API_KEY + "&with_genres=" + filter.toFixed()
   )
     .then((response) => response.json())
     .then((data) => data.results)
@@ -64,3 +56,14 @@ export const discoverMovies = async (
   return response;
 };
 
+export const genres = async (): Promise<Genre[]> => {
+  const response = await fetch(baseUrl+"genre/movie/list?api_key="+API_KEY+"&language=en-US")
+    .then((response) => response.json())
+    .then((data) => data.genres)
+    .catch((err) => {
+      console.error('Error fetching genres:', err);
+      throw new Error('Failed to fetch genres');
+    });
+
+  return response;
+};

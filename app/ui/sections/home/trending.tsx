@@ -8,9 +8,9 @@ export default async function Trending() {
   const data = await getTrending();
 
   return (
-    <div className="mt-20">
+    <section className="mt-20">
       <h1 className="text-white font-inter text-4xl font-bold">Trending</h1>
       <BackdropDisplay movies={data}/>
-    </div>
+    </section>
   );
 }

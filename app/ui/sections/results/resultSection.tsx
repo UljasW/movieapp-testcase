@@ -21,9 +21,9 @@ export default function ResultSection() {
   };
 
   return (
-    <div className="mt-20">
+    <section className="mt-20">
       <h1 className="text-white font-inter  text-4xl font-bold ">Search</h1>
       <BiglMovieDisplay movies={data} />
-    </div>
+    </section>
   );
 }

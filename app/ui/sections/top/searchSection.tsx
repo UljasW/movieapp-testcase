@@ -3,8 +3,8 @@ import SearchBar from "../../components/searchBar";
 
 export default function SearchSection() {
   return (
-    <section >
+    <search >
       <SearchBar />
-    </section>
+    </search>
   );
 }

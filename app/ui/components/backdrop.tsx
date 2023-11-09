@@ -20,15 +20,14 @@ export default function Backdrop(props: Props) {
         sizes="100vw"
       ></Image>
 
-<div className="w-full h-20 absolute bottom-0 bg-gradient-to-r from-black/70 to-transparent flex flex-col justify-center p-5">
-  <h3 className="text-white text-lg font-bold">
-    {props.movie.original_title}
-  </h3>
-  <span className="text-white text-base font-medium">
-    {props.movie.release_date.split("-")[0]}
-  </span>
-</div>
-
+      <div className="w-full h-11 md:h-20 absolute bottom-0 bg-gradient-to-r from-black/70 to-transparent flex flex-col justify-center p-5">
+        <h3 className="hidden md:block text-white text-lg font-bold">
+          {props.movie.original_title}
+        </h3>
+        <span className="hidden md:block text-white text-base font-medium">
+          {props.movie.release_date.split("-")[0]}
+        </span>
+      </div>
     </div>
   );
 }

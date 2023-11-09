@@ -1,13 +1,18 @@
 "use server";
 
-import { searchMovies, discoverMovies } from "./data";
+import { searchMovies, discoverMovies, genres } from "./data";
 
 export async function getSearchAction(search: string) {
   const res = await searchMovies(search);
   return res;
 }
 
-export async function getDiscoverAction(filters: Record<string, string>) {
-  const res = await discoverMovies(filters);
+export async function getDiscoverAction(filter: number) {
+  const res = await discoverMovies(filter);
+  return res;
+}
+
+export async function getGenres(){
+  const res = await genres();
   return res;
 }
