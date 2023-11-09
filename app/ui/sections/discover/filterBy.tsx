@@ -31,7 +31,7 @@ export default function FilterBy() {
   return (
     <section className="mt-20">
       <h1 className="text-white font-inter text-4xl font-bold">Discover</h1>
-      <div className="flex flex-row mt-8 gap-2.5  overflow-x-auto">
+      <div className="flex flex-row mt-8 gap-2.5 flex-wrap md:flex-nowrap md:overflow-x-auto">
         {genres?.map((genre) => (
           <FilterButton
             key={genre.id}
