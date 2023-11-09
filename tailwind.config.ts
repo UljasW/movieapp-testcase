@@ -18,6 +18,7 @@ const config: Config = {
       },
       backgroundColor: {
         nav: "#171717",
+        background: "#1a1a1a"
       },
     },
   },

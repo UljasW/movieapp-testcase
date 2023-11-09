@@ -19,9 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className + "h-screen w-screen flex"}>
+      <body className={inter.className + "h-screen w-screen flex bg-background"}>
         <Navbar />
-        <main>
+        <main className="w-full h-full overflow-auto p-5 md:p-10 md:pt-10 md:pb-10">
           <TopBar />
           {children}
           <Disclaimer/>
